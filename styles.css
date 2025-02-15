@@ -207,7 +207,7 @@ footer {
 /*---------------------------------------------------------------------------*/
 /*------------------ Responsividad para pantallas pequeñas ------------------*/
 
-@media (max-width: 768px) {
+@media (max-width: 200px) {
     .catalogo {
         flex-direction: column; /* (column o row) Cambia la disposición de los productos a una columna */
         align-items: center; /* Centra los productos */
