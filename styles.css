@@ -214,12 +214,12 @@ footer {
     }
 
     .producto {
-        width: 10%; /* Ajusta el tamaño de los productos en pantallas pequeñas */
+        width: 80%; /* Ajusta el tamaño de los productos en pantallas pequeñas */
         margin-bottom: 20px;
     }
 
     .imagenes-detalles img {
-        width: 10%; /* Reduce el tamaño de las imágenes en pantallas pequeñas */
+        width: 100px; /* Reduce el tamaño de las imágenes en pantallas pequeñas */
     }
 
 }
