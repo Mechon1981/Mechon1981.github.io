@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!========================================================>
+<!================= Encabezado de página =================>
+<!========================================================>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+
+<!========================================================>
+<!==================== Cuerpo de página ==================>
+<!========================================================>
+
+<body>
+
+    <!---------------------------------------------------->
+    <!--------------- Sector del título ------------------>
+
+    <header>
+        <div class="titulo-container">
+            <h1>De Campo - Detalles del Producto</h1>
+        </div>
+        <img src="imagenes/logo/logo01.jpg" alt="Logo" class="logo"> <!-- Aquí va tu logo -->
+    </header>
+
+    <!---------------------------------------------------->
+    <!------------- Detalles de los productos ------------>
+
+    <section class="detalles-producto-container">
+        
+        <div id="producto-detalles">
+            <h2 id="producto-nombre"></h2>
+            <p id="producto-descripcion"></p>
+            <p id="producto-precio"></p>
+            
+            <div id="imagen-principal-container">
+                <img id="imagen-principal" src="" alt="Imagen principal del producto">
+            </div>
+
+            <div class="navegacion-imagenes">
+                <button class="btn flecha" id="flecha-izquierda" onclick="cambiarImagen('izquierda')">&#8592;</button>
+                <button class="btn flecha" id="flecha-derecha" onclick="cambiarImagen('derecha')">&#8594;</button>
+            </div>
+            
+            <br>
+
+            <div class="volver-container">               
+                <button class="btn volver" onclick="volver()">Volver</button>
+            </div>
+
+            
+            <br>
+            <br>
+            <br>
+
+        </div>
+
+    </section>
+
+    <!---------------------------------------------------->
+    <!------------------- Pie de pagina ------------------>
+
+    <footer>
+        <p>&copy; 2025 Catálogo Online - by Carolina S.</p>
+    </footer>
+
+    <!---------------------------------------------------->
+    <!---------- Incluimos el archivo JavaScript --------->
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', cargarDetalles);
+        let producto;
+        let imagenIndex = 0;
+
+        function cargarDetalles() {
+            const productoId = localStorage.getItem('productoId');
+            if (!productoId) {
+                alert('Producto no encontrado');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            const productos = {
+                'producto1': { nombre: 'Producto 1', descripcion: 'Descripción del Producto 1.', precio: '$100', imagenes: ['imagenes/productos/producto01/producto01-02.jpg', 'imagenes/productos/producto01/producto01-03.jpg', 'imagenes/productos/producto01/producto01-04.jpg', 'imagenes/productos/producto01/producto01-05.jpg', 'imagenes/productos/producto01/producto01-06.jpg'] },
+                'producto2': { nombre: 'Producto 2', descripcion: 'Descripción del Producto 2.', precio: '$200', imagenes: ['imagenes/productos/producto02/PruebaProd2.jpg', 'imagenes/productos/producto02/producto02-03.jpg', 'imagenes/productos/producto02/producto02-04.jpg', 'imagenes/productos/producto02/producto02-05.jpg', 'imagenes/productos/producto02/producto02-06.jpg'] },
+                'producto3': { nombre: 'Producto 3', descripcion: 'Descripción del Producto 3.', precio: '$300', imagenes: ['imagenes/productos/producto03/producto03-02.jpg', 'imagenes/productos/producto03/producto03-03.jpg', 'imagenes/productos/producto03/producto03-04.jpg', 'imagenes/productos/producto03/producto03-05.jpg', 'imagenes/productos/producto03/producto03-06.jpg'] },
+                'producto4': { nombre: 'Producto 4', descripcion: 'Descripción del Producto 4.', precio: '$300', imagenes: ['imagenes/productos/producto04/producto04-02.jpg', 'imagenes/productos/producto04/producto04-03.jpg', 'imagenes/productos/producto04/producto04-04.jpg', 'imagenes/productos/producto04/producto04-05.jpg', 'imagenes/productos/producto04/producto04-06.jpg'] },
+                'producto5': { nombre: 'Producto 5', descripcion: 'Descripción del Producto 5.', precio: '$300', imagenes: ['imagenes/productos/producto05/producto05-02.jpg', 'imagenes/productos/producto05/producto05-03.jpg', 'imagenes/productos/producto05/producto05-04.jpg', 'imagenes/productos/producto05/producto05-05.jpg', 'imagenes/productos/producto05/producto05-06.jpg'] },
+                'producto6': { nombre: 'Producto 6', descripcion: 'Descripción del Producto 6.', precio: '$300', imagenes: ['imagenes/productos/producto06/producto06-02.jpg', 'imagenes/productos/producto06/producto06-03.jpg', 'imagenes/productos/producto06/producto06-04.jpg', 'imagenes/productos/producto06/producto06-05.jpg', 'imagenes/productos/producto06/producto06-06.jpg'] }
+            };
+
+            producto = productos[productoId];
+            if (!producto) {
+                alert('Producto no encontrado');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            document.getElementById('producto-nombre').innerText = producto.nombre;
+            document.getElementById('producto-descripcion').innerText = producto.descripcion;
+            document.getElementById('producto-precio').innerText = producto.precio;
+            mostrarImagen(imagenIndex);
+        }
+
+        function mostrarImagen(indice) {
+            document.getElementById('imagen-principal').src = producto.imagenes[indice];
+        }
+
+        function cambiarImagen(direccion) {
+            if (direccion === 'derecha') {
+                imagenIndex = (imagenIndex + 1) % producto.imagenes.length;
+            } else {
+                imagenIndex = (imagenIndex - 1 + producto.imagenes.length) % producto.imagenes.length;
+            }
+            mostrarImagen(imagenIndex);
+        }
+
+        function volver() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>

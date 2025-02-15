@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!========================================================>
+<!================= Encabezado de página =================>
+<!========================================================>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+
+<!========================================================>
+<!==================== Cuerpo de página ==================>
+<!========================================================>
+
+<body>
+
+    <!---------------------------------------------------->
+    <!--------------- Sector del título ------------------>
+
+    <header>
+        <div class="titulo-container">
+            <h1>De Campo - Catálogo de Productos</h1>
+        </div>
+        <img src="imagenes/logo/logo01.jpg" alt="Logo" class="logo"> <!-- Aquí va tu logo -->
+    </header>
+
+    <!---------------------------------------------------->
+    <!--------- Comentario antes de los productos -------->
+
+    <section class="comentarios">
+        <br>
+        <p>A continuación se muestran los productos en stock:</p>
+        <br>
+    </section>
+
+    <!---------------------------------------------------->
+    <!--------- Recuadros de muestra de productos -------->
+
+    <section class="catalogo">
+
+        <!-------------- Producto 1 --------------->
+
+        <div class="producto" id="producto1">
+            <img src="imagenes/productos/producto01/producto01-01.jpg" alt="Producto 1" onclick="mostrarDetalles('producto1')">
+            <h2>Producto 1</h2>
+            <p>Descripción del Producto 1.</p>
+            <p>Precio: $100</p>
+        </div>
+
+        <!-------------- Producto 2 --------------->
+
+        <div class="producto" id="producto2">
+            <img src="imagenes/productos/producto02/producto02-01.jpg" alt="Producto 2" onclick="mostrarDetalles('producto2')">
+            <h2>Producto 2</h2>
+            <p>Descripción del Producto 2.</p>
+            <p>Precio: $200</p>
+        </div>
+
+        <!-------------- Producto 3 --------------->
+
+        <div class="producto" id="producto3">
+            <img src="imagenes/productos/producto03/producto03-01.jpg" alt="Producto 3" onclick="mostrarDetalles('producto3')">
+            <h2>Producto 3</h2>
+            <p>Descripción del Producto 3.</p>
+            <p>Precio: $300</p>
+        </div>
+
+        <!-------------- Producto 4 --------------->
+
+        <div class="producto" id="producto4">
+            <img src="imagenes/productos/producto04/producto04-01.jpg" alt="Producto 4" onclick="mostrarDetalles('producto4')">
+            <h2>Producto 4</h2>
+            <p>Descripción del Producto 4.</p>
+            <p>Precio: $150</p>
+        </div>
+
+        <!-------------- Producto 5 --------------->
+
+        <div class="producto" id="producto5">
+            <img src="imagenes/productos/producto05/producto05-01.jpg" alt="Producto 5" onclick="mostrarDetalles('producto5')">
+            <h2>Producto 5</h2>
+            <p>Descripción del Producto 5.</p>
+            <p>Precio: $250</p>
+        </div>
+
+        <!-------------- Producto 6 --------------->
+
+        <div class="producto" id="producto6">
+            <img src="imagenes/productos/producto06/producto06-01.jpg" alt="Producto 6" onclick="mostrarDetalles('producto6')">
+            <h2>Producto 6</h2>
+            <p>Descripción del Producto 6.</p>
+            <p>Precio: $350</p>
+        </div>
+    </section>
+
+    <!---------------------------------------------------->
+    <!-------- Comentario después de los productos ------->
+
+    <section class="comentarios">
+        <br>
+        <p>Muchas gracias por visitar nuestra página.</p>
+        <br>
+        <p>¡Esperamos que encuentres lo que buscas!</p>
+        <br>
+    </section>
+
+    <!---------------------------------------------------->
+    <!------------------- Pie de pagina ------------------>
+
+    <footer>
+        <p>&copy; 2025 Catálogo Online - by Carolina S.</p>
+    </footer>
+
+    <!---------------------------------------------------->
+    <!---------- Incluimos el archivo JavaScript --------->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
