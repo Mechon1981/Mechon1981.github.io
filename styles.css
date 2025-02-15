@@ -214,7 +214,7 @@ footer {
     }
 
     .producto {
-        width: 100px; /* Ajusta el tamaño de los productos en pantallas pequeñas */
+        width: 200px; /* Ajusta el tamaño de los productos en pantallas pequeñas */
         margin-bottom: 20px;
     }
 
