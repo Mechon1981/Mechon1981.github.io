@@ -209,12 +209,12 @@ footer {
 
 @media (max-width: 768px) {
     .catalogo {
-        flex-direction: row; /* (column o row) Cambia la disposición de los productos a una columna */
+        flex-direction: column; /* (column o row) Cambia la disposición de los productos a una columna */
         align-items: center; /* Centra los productos */
     }
 
     .producto {
-        width: 80%; /* Ajusta el tamaño de los productos en pantallas pequeñas */
+        width: 90%; /* Ajusta el tamaño de los productos en pantallas pequeñas */
         margin-bottom: 20px;
     }
 
