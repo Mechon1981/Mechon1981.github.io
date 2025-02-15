@@ -209,7 +209,7 @@ footer {
 
 @media (max-width: 768px) {
     .catalogo {
-        flex-direction: column; /* (column o row) Cambia la disposición de los productos a una columna */
+        flex-direction: row; /* (column o row) Cambia la disposición de los productos a una columna */
         align-items: center; /* Centra los productos */
     }
 
