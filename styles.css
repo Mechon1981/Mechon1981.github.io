@@ -219,7 +219,7 @@ footer {
     }
 
     .imagenes-detalles img {
-        width: 30%; /* Reduce el tamaño de las imágenes en pantallas pequeñas */
+        width: 50%; /* Reduce el tamaño de las imágenes en pantallas pequeñas */
     }
 
 }
